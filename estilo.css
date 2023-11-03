@@ -21,8 +21,9 @@ body{
 .menu{
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    padding: 40px;
+    padding: 30px;
 }
 .navegacao{
     font-family: 'Barlow', sans-serif;
@@ -30,7 +31,7 @@ body{
     font-size: 18px;
 }
 .menu img{
-    width: 12%;
+    width: 20%;
 }
 .navegacao a{
     padding: 20px;
@@ -53,16 +54,17 @@ body{
 .navegacao button a:hover{
     color: white;
 }
+
 .titulo-cabecalho{
     display: flex;
     text-transform: uppercase;
     justify-content: center;
-    
+    text-align: center;
 }
 .titulo-cabecalho h1{
     color: white;
     font-family: 'Fraunces', serif;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 900;
     letter-spacing: 0.5rem;
 }
@@ -70,6 +72,9 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+.flecha-cabecalho img{
+    width: 2%;
 }
 
 /*Corpo*/
@@ -206,5 +211,178 @@ body{
     width: 50%;
     border-radius: 100%;
 }
+.relato-individual p{
+    font-size: 18px;    
+}
+.relato-individual .texto-relato{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    color: hsl(213, 9%, 39%);
+    line-height: 30px;
+}
+.relato-individual .texto-nome-cargo{
+    line-height: 25px;
+}
+.relato-individual .nome{
+    font-weight: 900;
+    color: rgb(37, 46, 63);
+}
+.relato-individual .cargo{
+    color: hsl(232, 10%, 55%);
+}
+.relato-individual .texto-relato{
+    padding: 10%;
+}
 
+/*Seção imagens*/
+.secao-imagens img{
+    width: 100%;
+    height: 100%;
+}
 
+/*Rodape*/
+.rodape{
+    background-color: hsl(168, 34%, 41%);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    height: 50%;
+}
+.rodape .logo-rodape img{
+    width: 150px;
+}
+.rodape .link-rodape{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+.rodape .link-rodape a{
+    color: hsl(167, 40%, 24%);
+    font-family: 'Barlow', sans-serif;
+}
+.rodape .link-rodape a:hover{
+    color: white;
+}
+.rodape .icones img{
+    margin: 0 10px;
+}
+.rodape .icones img:hover{
+    background-color: white;
+    border-radius: 5px;
+}
+
+/*Checkbox - menu*/
+label{
+    display: none;
+}
+#check{
+    display: none;
+    z-index: 3;
+}
+/*Deixando o menu responsivo*/
+@media (max-width: 960px) {
+    .menu .navegacao{
+        display: none;
+    }
+    .menu img{
+        width: 30%;
+    }
+    label{
+        display: inline;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        transition-property: color;
+    }
+    label:hover{
+        color: #fff;
+    }
+    #check:checked ~ header .navegacao {
+        z-index: 2;
+        margin-top: 100px;
+        /*position fixed, deixa os itens do menu fixos, na hora do menu ser ativado*/
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    #check:checked ~ header .navegacao a{
+        color: hsl(213, 9%, 39%);
+    }
+    .navegacao button{
+        background-color: yellow;
+    }
+    .titulo-cabecalho{
+        margin-bottom: 4%;
+    }
+    .flecha-cabecalho img{
+        width: auto;
+    }
+}
+@media (max-width: 540px){
+    .menu img{
+        width: 40%;
+    }
+
+    /*Corpo*/
+    /*ovo*/
+    .ovo{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .ovo .texto-ovo, .ovo .imagem-ovo{
+        width: 100%;
+    }
+    .copo{
+        flex-direction: column;
+    }
+
+    /*Frutas*/
+    .frutas{
+        flex-direction: column;
+    }
+    .texto-cereja{
+        background-image: url(images/mobile/image-graphic-design.jpg);
+    }
+    .frutas .texto-cereja, .frutas .texto-laranja{
+        width: 100%;
+    }
+    .texto{
+        gap: 20px;
+        padding: 15%;
+        font-family: 'Fraunces', serif;
+        color: rgb(37, 46, 63);
+    }
+
+    /*Relatos*/
+    .relato{
+        height: 100%;
+        flex-direction: column;
+        padding: 10%;
+    }
+    .pessoas-relato{
+        flex-direction: column;
+    }
+    .relato-individual{
+        padding: 10% 0;
+    }
+
+    /*Imagens*/
+    .secao-imagens{
+        width: 50%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /*Rodape*/
+    .rodape{
+        flex-direction: column;
+    }
+}
