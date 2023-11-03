@@ -6,13 +6,15 @@
 
   <link rel="stylesheet" href="estilo.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 
 </head>
 <body>
+  <input type="checkbox" id="check">
   <header class="cabecalho">
     <div class="menu">
+      <!--Logo-->
       <img src="images/logo.svg" alt="logo">
       <nav class="navegacao">
         <a class="branco" href="#">About</a>
@@ -20,6 +22,9 @@
         <a class="branco" href="#">Projects</a>
         <button><a href="#">CONTACT</a></button>
       </nav>
+      <label for="check">
+        <i class="fas fa-bars menu-btn" style="color: white;"></i>
+      </label>
     </div>
     <div class="titulo-cabecalho">
       <h1>we are creatives</h1>
@@ -30,6 +35,7 @@
   </header>
 
   <main class="corpo">
+
     <section class="ovo">
       <article class="texto-ovo">
         <h2>Transform your brand</h2>
@@ -39,16 +45,16 @@
       </article>
       <article class="imagem-ovo">
         <picture>
-          <source srcset="images/desktop/image-transform.jpg" media="(min-width: 600px)"/>
+          <source srcset="images/desktop/image-transform.jpg" media="(min-width: 960px)"/>
           <img src="images/mobile/image-transform.jpg" alt="Imagem de um ovo" />
         </picture>       
       </article>
     </section>
 
-    <section class="ovo">
+    <section class="ovo copo">
       <article class="imagem-ovo">
         <picture>
-          <source srcset="images/desktop/image-stand-out.jpg" media="(min-width: 600px)"/>
+          <source srcset="images/desktop/image-stand-out.jpg" media="(min-width: 960px)"/>
           <img src="images/mobile/image-stand-out.jpg" alt="Imagem de um ovo" />
         </picture>    
       </article>
@@ -59,7 +65,7 @@
       </article>
     </section>
 
-    <section class="ovo frutas">
+    <section class="frutas ovo">
       <article class="texto-cereja texto">
         <h2>Graphic design</h2>
         <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p> 
@@ -80,10 +86,8 @@
             <img src="images/image-emily.jpg" alt="imagem relato da Emily">
           </div>
           <div>
-            <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended! <br>
-              Jennie F. <br>
-              Business Owner
-            </p>
+            <p class="texto-relato">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+            <p class="texto-nome-cargo"><span class="nome">Emily R. </span><br><span class="cargo">Marketing Director</span></p>
           </div>
         </div>
         <div class="relato-individual">
@@ -91,10 +95,8 @@
             <img src="images/image-thomas.jpg" alt="imagem relato da Thomas">
           </div>
           <div>
-            <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended! <br>
-              Jennie F. <br>
-              Business Owner
-            </p>
+            <p class="texto-relato">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+            <p class="texto-nome-cargo"><span class="nome">Thomas S.</span><br><span class="cargo">Chief Operating Oficcer</span></p>
           </div>
         </div>
         <div class="relato-individual">
@@ -102,45 +104,49 @@
             <img src="images/image-jennie.jpg" alt="imagem relato da Jennie">
           </div>
           <div>
-            <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended! <br>
-              Jennie F. <br>
-              Business Owner
-            </p>
+            <p class="texto-relato">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended! <br></p>
+            <p class="texto-nome-cargo"><span class="nome">Jennie F.</span><br><span class="cargo">Business Owner</span></p>
           </div>
         </div>
       </article>
     </section>
+
+    <section class="ovo secao-imagens">
+      <picture>
+        <source srcset="images/desktop/image-gallery-milkbottles.jpg" media="(min-width: 600px)"/>
+        <img src="images/mobile/image-gallery-milkbottles.jpg" alt="Imagem de um ovo" />
+      </picture>
+      <picture>
+        <source srcset="images/desktop/image-gallery-orange.jpg" media="(min-width: 600px)"/>
+        <img src="images/mobile/image-gallery-orange.jpg" alt="Imagem de um ovo" />
+      </picture>    
+      <picture>
+        <source srcset="images/desktop/image-gallery-cone.jpg" media="(min-width: 600px)"/>
+        <img src="images/mobile/image-gallery-cone.jpg" alt="Imagem de um ovo" />
+      </picture>    
+      <picture>
+        <source srcset="images/desktop/image-gallery-sugarcubes.jpg" media="(min-width: 600px)"/>
+        <img src="images/mobile/image-gallery-sugar-cubes.jpg" alt="Imagem de um ovo" />
+      </picture>    
+    </section>
+    
   </main>
   
-  
- 
-  
-
-  
-
-  
-
-  
-  
-
-  
-  
-
-
-
-  
-
-  
- 
-  
-
-  
-
-
-  About
-  Services
-  Projects
-  Contact
-
+  <footer class="ovo rodape">
+    <section class="logo-rodape">
+      <img src="images/logo.svg" alt="logo">
+    </section>
+    <section class="link-rodape">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Projects</a>
+    </section>
+    <section class="icones">
+      <img src="images/icon-facebook.svg" alt="icon facebook">
+      <img src="images/icon-instagram.svg" alt="icon instagram">
+      <img src="images/icon-twitter.svg" alt="icon twitter">
+      <img src="images/icon-pinterest.svg" alt="icon pinterest">
+    </section>
+  </footer>
 </body>
 </html>
